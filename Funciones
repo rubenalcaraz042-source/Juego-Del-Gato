@@ -1,0 +1,17 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+// Prototipos de funciones
+void mostrarTablero(char tablero[3][3]);
+bool hacerMovimiento(char tablero[3][3], int fila, int columna, char jugador);
+bool verificarGanador(char tablero[3][3], char jugador);
+bool tableroLleno(char tablero[3][3]);
+void reiniciarTablero(char tablero[3][3]);
+void menu();
+
+// Función principal
+int main() {
+    menu();
+    return 0;
+}
