@@ -1,0 +1,32 @@
+// Inicializa el tablero vacío
+void reiniciarTablero(char tablero[3][3]) {
+    char pos = '1';
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            tablero[i][j] = pos++;
+        }
+    }
+}
+
+// Muestra el tablero en pantalla
+void mostrarTablero(char tablero[3][3]) {
+    cout << "\n";
+    for (int i = 0; i < 3; i++) {
+        cout << " ";
+        for (int j = 0; j < 3; j++) {
+            cout << tablero[i][j];
+            if (j < 2) cout << " | ";
+        }
+        cout << "\n";
+        if (i < 2) cout << "---|---|---\n";
+    }
+}
+
+// Realiza un movimiento en el tablero
+bool hacerMovimiento(char tablero[3][3], int fila, int columna, char jugador) {
+    if (tablero[fila][columna] != 'X' && tablero[fila][columna] != 'O') {
+        tablero[fila][columna] = jugador;
+        return true;
+    }
+    return false;
+}
